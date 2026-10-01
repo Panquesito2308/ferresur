@@ -83,9 +83,7 @@ Route::middleware(['auth', 'role:administrador'])->group(function () {
     Route::get('/administrador/dashboard', [AdministradorController::class, 'dashboard'])->name('administrador.dashboard');
     Route::get('/administrador/empleados', [EmpleadoController::class, 'index'])->name('administrador.empleados.index'); // Cambio aquí
     Route::get('/administrador/empleados/{id_empleado}/edit', [EmpleadoController::class, 'edit'])->name('administrador.empleados.edit');
-    Route::get('/administrador/eventos', [EventoController::class, 'index'])->name('administrador.eventos.index'); // Cambio aquí
 
-    Route::get('/administrador/eventos/{evento}/edit', [EventoController::class, 'edit'])->name('administrador.eventos.edit');
 
     Route::get('/productos/reporte', [ProductoController::class, 'generarReporte'])->name('productos.reporte');
     Route::get('/eventos/reporte', [EventoController::class, 'generarReporte'])->name('eventos.reporte');
