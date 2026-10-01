@@ -93,3 +93,46 @@ El proyecto utiliza Git y GitHub para el control de versiones.
 Los archivos que contienen información sensible, como `.env`, no se almacenan en el repositorio.
 
 El archivo `.gitignore` se utiliza para excluir credenciales, dependencias, archivos temporales y otros elementos que no deben formar parte del control de versiones.
+
+## Estrategia de despliegue
+
+Para el sistema FERRESUR se utiliza una estrategia de despliegue controlado, en la cual los cambios deben pasar previamente por el flujo de control de versiones antes de integrarse a la rama principal.
+
+### Preparación de la versión
+
+Antes de realizar un despliegue se debe verificar que:
+
+- Los cambios hayan sido revisados.
+- Los Pull Request necesarios hayan sido aprobados.
+- La rama `main` se encuentre actualizada.
+- No existan cambios locales pendientes.
+- Las principales funcionalidades hayan sido verificadas.
+
+### Validación previa
+
+Laravel permite preparar y validar elementos de la aplicación mediante:
+
+    php artisan optimize
+
+Este proceso permite optimizar elementos como configuración, eventos, rutas y vistas.
+
+Si durante esta validación se detecta un problema, el despliegue debe detenerse hasta realizar la corrección correspondiente.
+
+### Proceso de liberación
+
+1. Verificar la versión estable de la rama `main`.
+2. Realizar un respaldo de la información necesaria.
+3. Instalar las dependencias requeridas.
+4. Configurar las variables de entorno del servidor.
+5. Ejecutar las tareas necesarias de Laravel.
+6. Optimizar la aplicación.
+7. Publicar la versión.
+8. Verificar las funcionalidades principales después del despliegue.
+
+### Respuesta ante fallos
+
+Si se detecta un error durante el proceso de despliegue, se debe detener la liberación, identificar la causa y realizar la corrección en una rama independiente.
+
+La corrección debe pasar nuevamente por el proceso de commit, push, Pull Request, revisión y merge antes de volver a intentar el despliegue.
+
+En caso de que un error sea detectado después de la publicación, se deberá regresar a una versión estable y restaurar la información respaldada cuando sea necesario.
