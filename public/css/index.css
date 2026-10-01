@@ -1,0 +1,315 @@
+/* Contenido */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    max-width: 900px;
+    padding: 10rem;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.highlight-orange {
+    color: #ff6514;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.mi-boton {
+    background-color: #ff6514;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mi-boton:hover {
+    background-color: #ff6514;
+}
+
+
+/* Botón negro 
+      .btn-secondary {
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+      }
+
+      .btn-secondary:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      /*posterior a video background*/
+
+/*para dirigirte a productos*/
+.contai {
+    display: flex;
+    align-items: center;
+    /* Alinear verticalmente */
+    justify-content: space-between;
+    /* Separar texto e imagen */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.conte {
+    flex: 1;
+    /* El contenido ocupa el espacio disponible */
+    text-align: left;
+}
+
+.high {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6514;
+    margin-bottom: 8px;
+}
+
+.ti {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.des {
+    font-size: 16px;
+    color: #000;
+    max-width: 500px;
+}
+
+
+
+
+
+/* Estilos para las tarjetas */
+.tarjeta-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.63);
+    padding: 20px;
+    margin: 10px;
+    width: 280px;
+    text-align: center;
+    align-content: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tarjeta:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 60px;
+    height: 60px;
+    margin: 15px auto;
+    /* Centra la imagen horizontalmente */
+    display: block;
+}
+
+.tarjeta h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+    /* Aumentar el tamaño de la fuente */
+}
+
+.tarjeta:hover h3 {
+    color: #ff6514;
+
+}
+
+.tarjeta p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.tarjeta:hover p {
+    color: #333;
+}
+
+.t1 {
+    text-align: center;
+}
+
+/*eventos*/
+.event-register {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.event-register-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    justify-content: space-between;
+    /* Distribuye el espacio entre la imagen y el texto */
+}
+
+.event-image {
+    width: 40%;
+    /* Ajusta el ancho de la imagen */
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Opcional: bordes redondeados para la imagen */
+}
+
+.event-text {
+    width: 55%;
+    /* Ajusta el ancho del texto */
+}
+
+.event-register h2 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.event-register p {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.register-button {
+    background-color: #ff6514;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #b20710;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .event-register-content {
+        flex-direction: column;
+        /* Apila la imagen y el texto en pantallas pequeñas */
+        align-items: flex-start;
+        /* Alinea el texto a la izquierda en pantallas pequeñas */
+    }
+
+    .event-image {
+        width: 100%;
+        /* La imagen ocupa todo el ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+        /* Espacio entre la imagen y el texto */
+    }
+
+    .event-text {
+        width: 100%;
+        /* El texto ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .event-register h2 {
+        font-size: 1.8em;
+    }
+
+    .event-register p {
+        font-size: 1em;
+    }
+
+    .register-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    /* Área de Marcas */
+    .area-marcas {
+        background-color: #f9f9f9;
+    }
+
+    /* Títulos */
+    .titulo-seccion h1 {
+        font-size: 2.5rem;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .titulo-seccion p {
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    /* Carrusel */
+    .carousel-inner {
+        display: flex;
+        align-items: center;
+    }
+
+    .carousel-item img {
+        max-height: 100px;
+        object-fit: contain;
+        margin: 0 auto;
+        opacity: 0.5;
+        /* Establece la opacidad inicial */
+        transition: opacity 0.3s ease;
+        /* Transición suave para la opacidad */
+    }
+
+    /* Efecto cuando el ratón pasa sobre la imagen */
+    .carousel-item img:hover {
+        opacity: 1;
+        /* Restaura la opacidad al pasar el ratón */
+    }
+
+    /* Controles del Carrusel */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
