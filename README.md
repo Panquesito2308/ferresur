@@ -132,3 +132,43 @@ Si se detecta un error durante el proceso de despliegue, se debe detener la libe
 La corrección debe pasar nuevamente por el proceso de commit, push, Pull Request, revisión y merge antes de volver a intentar el despliegue.
 
 En caso de que un error sea detectado después de la publicación, se deberá regresar a una versión estable y restaurar la información respaldada cuando sea necesario.
+
+## Instalación y ejecución
+
+Para ejecutar el sistema FERRESUR en un entorno local es necesario contar con PHP, Composer, Node.js, npm y un servidor de base de datos MySQL.
+
+### Instalación
+
+1. Clonar el repositorio del proyecto.
+2. Acceder a la carpeta del proyecto.
+3. Instalar las dependencias de PHP:
+
+   composer install
+
+4. Instalar las dependencias del frontend:
+
+   npm install
+
+5. Crear el archivo `.env` a partir de `.env.example`.
+6. Configurar la conexión a la base de datos en el archivo `.env`.
+7. Generar la clave de la aplicación:
+
+   php artisan key:generate
+
+8. Preparar la base de datos correspondiente al proyecto.
+
+### Ejecución
+
+Para iniciar el servidor de desarrollo de Laravel:
+
+   php artisan serve
+
+Para ejecutar los recursos del frontend en modo de desarrollo:
+
+   npm run dev
+
+Posteriormente, la aplicación puede consultarse desde el navegador utilizando la dirección proporcionada por Laravel.
+
+### Seguridad
+
+El archivo `.env` no debe almacenarse en el repositorio debido a que puede contener información sensible, como credenciales de conexión a la base de datos.
