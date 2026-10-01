@@ -1,43 +1,39 @@
-# Sistema Web FERRESUR
+## Pruebas del sistema
 
-Sistema web desarrollado para FERRESUR con el propósito de administrar información relacionada con la empresa y gestionar sus eventos.
+El sistema FERRESUR cuenta con un proceso de pruebas funcionales orientado a verificar el comportamiento de sus principales módulos.
 
-## Descripción
+Las pruebas se realizan en un entorno local utilizando la aplicación Laravel, la base de datos del proyecto y un navegador web.
 
-El sistema permite administrar diferentes procesos de FERRESUR desde una aplicación web. Cuenta con distintos tipos de usuarios y funcionalidades para la gestión de eventos, empleados, clientes, productos y sucursales.
+### Funcionalidades verificadas
 
-También permite que los usuarios consulten eventos disponibles y realicen su registro en ellos.
+Entre las funcionalidades consideradas en las pruebas se encuentran:
 
-## Funcionalidades principales
+- Inicio de sesión con credenciales válidas.
+- Validación de credenciales incorrectas.
+- Registro de nuevos usuarios.
+- Control de acceso de acuerdo con el rol del usuario.
+- Consulta de eventos disponibles.
+- Creación de eventos por parte del administrador.
+- Visualización de eventos por clientes.
+- Registro de clientes a eventos.
+- Cancelación de registros a eventos.
 
-- Inicio de sesión y autenticación de usuarios.
-- Gestión de empleados.
-- Gestión de clientes.
-- Gestión de usuarios.
-- Gestión de productos.
-- Gestión de sucursales.
-- Creación y administración de eventos.
-- Registro de usuarios a eventos.
-- Consulta del historial de eventos.
-- Generación de reportes.
-- Administración de perfiles.
-- Gestión de respaldos del sistema.
+### Resultados
 
-## Tecnologías utilizadas
+Cada caso de prueba contempla:
 
-- PHP
-- Laravel
-- MySQL
-- Blade
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Tailwind CSS
-- Vite
-- Git
-- GitHub
+- Identificador.
+- Funcionalidad evaluada.
+- Objetivo.
+- Precondiciones.
+- Datos de entrada.
+- Pasos de ejecución.
+- Resultado esperado.
+- Resultado obtenido.
+- Estado de la prueba.
+- Evidencia.
 
+Los resultados obtenidos permiten verificar el funcionamiento de las principales características del sistema antes de realizar un despliegue.
 ## Requisitos
 
 Para ejecutar el proyecto de manera local se requiere:
